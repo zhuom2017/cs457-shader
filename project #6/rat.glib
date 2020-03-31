@@ -1,0 +1,58 @@
+##OpenGL GLIB
+
+Perspective 70
+LookAt 0 0 3  0 -4 0  0 1 0
+
+Vertex texture.vert
+Fragment texture.frag
+Program Texture  TexUnit 6
+
+Texture2D  6  kec.posx.bmp
+QuadYZ 5. 5. 10 10
+
+Texture2D  6  kec.negx.bmp
+QuadYZ -5. 5. 10 10
+
+
+Texture2D  6  kec.posy.bmp
+QuadXZ 5. 5. 10 10
+
+Texture2D  6  kec.negy.bmp
+QuadXZ -5. 5. 10 10
+
+
+Texture2D  6  kec.posz.bmp
+QuadXY 5. 5. 10 10
+
+Texture2D  6  kec.negz.bmp
+QuadXY -5. 5. 10 10
+
+
+CubeMap 6 kec.posx.bmp kec.negx.bmp  kec.posy.bmp kec.negy.bmp   kec.posz.bmp kec.negz.bmp
+
+CubeMap 7 kec.posx.bmp kec.negx.bmp  kec.posy.bmp kec.negy.bmp   kec.posz.bmp kec.negz.bmp
+
+Vertex  	rat.vert
+Fragment        rat.frag
+Program rat	                                       \
+    uReflectUnit 6                          \
+    uRefractUnit 7                          \
+    uEta <0. 1.4 4.0>                       \
+    uMix <0. 1. 1.>
+Translate 0. -4.5. 0.
+Obj ratL.obj
+
+
+Vertex   rat2.vert
+Fragment rat2.frag
+Program  rat2                                              \
+        uAd <.01 .1 .5>  uBd <.01 .15 .5>                      \
+        uNoiseAmp <0. 0. 1.>  uNoiseFreq <0. 1. 10.>      	\
+        uAlpha <0. 1. 1.>                                       \
+        uTol <0. 0. 1.>						\
+        uUseChromaDepth <false>                           \
+        uChromaBlue <-5.  -4.  0.>                             \
+        uChromaRed  <-3.  -2.5  2.>
+
+Color 1. .9 0
+Obj ratM.obj

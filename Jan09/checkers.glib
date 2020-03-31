@@ -1,0 +1,15 @@
+##OpenGL GLIB
+Perspective 90
+LookAt 0 0 3  0 0 0  0 1 0
+
+Vertex   checkers.vert
+Fragment checkers.frag
+Program  Checkers  			\
+		uSmooth <false>		\
+		uSize <0 0.1 1.0>	\
+		uTol <0. 0.005 .02>	\
+		uSquareColor {1. .5 0.}
+
+Color 1  1  1
+#Torus  1.  .5  60 60
+Sphere 1. 60 60

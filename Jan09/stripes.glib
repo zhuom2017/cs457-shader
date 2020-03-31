@@ -1,0 +1,49 @@
+##OpenGL GLIB
+
+Perspective 90
+LookAt 0 0 10  0 0 0  0 1 0
+
+Vertex   stripes.vert
+Fragment stripes.frag
+Program Stripes   				\
+		uModelCoordinates <true>	\
+		uA <0 1. 10>			\
+		uP <0. .25 1.>			\
+		uTol <0. 0. .5>
+
+Translate -5 0 0
+
+# sphere:
+
+Color 1 0 0
+Sphere 1 60 60
+
+# cone:
+
+Color 1 1 0
+Translate 1.5 0 0
+TransformBegin
+	Cone 0.5 1.
+TransformEnd
+
+# torus:
+
+Color 0 1 0
+Translate 2 0 0
+TransformBegin
+	Torus 1. .5 60 60
+TransformEnd
+
+# teapot:
+
+Color 1 0.5 0
+Translate 4 0 0
+TransformBegin
+	Teapot
+TransformEnd
+
+# cylinder:
+
+Color 1 0 1
+Translate 3 0 0
+Cylinder .5 2.
