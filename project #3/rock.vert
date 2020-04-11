@@ -22,6 +22,7 @@ main( )
 	float x=gl_Vertex.x;
 	float y=gl_Vertex.y;
 	float r = sqrt(pow(x,2) + pow(y,2));
+    flaot pi = 3.141592654;
 
 	float z = uA*cos(2*pi*uB*r+uC)*exp(-uD*r);
   vec4 glVertex = gl_Vertex.xyzw;
